@@ -1,9 +1,10 @@
 <script>
+import {links} from '../data/database.js'
 export default {
   name:'Main',
   data(){
     return{
-
+      links,
     }
   }
 }
@@ -19,29 +20,9 @@ export default {
       <!-- CONTENITORE DELLE SVG -->
       <div id="contenitore-svg">
         <!-- BOX INFO -->
-        <div class="svg-box">
-          <div class="svg"><img class="normal" src="../assets/img/buy-comics-digital-comics.png" alt=""></div>
-          <div class="svgName">DIGITAL COMICS</div>
-        </div>
-
-        <div class="svg-box">
-          <div class="svg"><img class="normal" src="../assets/img/buy-comics-merchandise.png" alt=""></div>
-          <div class="svgName">DC MERCHANDISE</div>
-        </div>
-
-        <div class="svg-box">
-          <div class="svg"><img class="normal" src="../assets/img/buy-comics-subscriptions.png" alt=""></div>
-          <div class="svgName">SUBSCRIPTION</div>
-        </div>
-
-        <div class="svg-box">
-          <div class="svg"><img class="w30" src="../assets/img/buy-comics-shop-locator.png" alt=""></div>
-          <div class="svgName">COMIC SHOP LOCATOR</div>
-        </div>
-
-        <div class="svg-box">
-          <div class="svg"><img class="normal" src="../assets/img/buy-dc-power-visa.svg" alt=""></div>
-          <div class="svgName">DC POWER VISA</div>
+        <div class="svg-box" v-for="(link , i) in links" :key="i">
+          <div class="svg"><img class="normal" :src="link.immagine" alt=""></div>
+          <div class="svgName">{{link.nome}}</div>
         </div>
       </div>
     </div>
@@ -66,7 +47,7 @@ export default {
     display: flex;
     justify-content: center;
   }#contenitore-svg{
-    width: 75%;
+    width: 65%;
     display: flex;
     align-items: center;
     justify-content: space-around;
