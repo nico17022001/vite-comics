@@ -21,7 +21,7 @@ export default {
       <!-- CONTENITORE MENU -->
       <div id="contenitore-nav">
         <ul>
-          <li class="blu-team">CHARACTERS</li>
+          <li>CHARACTERS</li>
           <li>COMICS</li>
           <li>MOVIES</li>
           <li>TV</li>
@@ -71,7 +71,17 @@ export default {
       li{
         margin-left:20px;
         font-size: small;
+        border-bottom: solid 5px rgba(0, 0, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
       }
+
+      li:hover{
+          color: #0282f9;;
+          border-bottom:solid 5px #0282f9; 
+        }
     }
 
   }
