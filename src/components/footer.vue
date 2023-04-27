@@ -54,7 +54,15 @@ export default {
     width: 50%;
     height: 400px;
   }#aside-sinistro{
-
+    background-color: cadetblue;
+    height: 100%;
+    width: 35%;
+  }#list-top{
+    height: 70%;
+    background-color: bisque;
+  }#list-bottom{
+    height: 30%;
+    background-color: chocolate;
   }
   
   
