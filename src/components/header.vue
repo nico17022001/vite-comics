@@ -83,10 +83,6 @@ export default {
           border-bottom:solid 5px #0282f9; 
         }
     }
-
   }
-
-
-
 
 </style>
