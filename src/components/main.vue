@@ -4,7 +4,6 @@ import imgDc from '../data/imgs.json';
 import immagini from '../data/imgs.json';
 
 
-
 export default {
   name:'Main',
   data(){
@@ -36,6 +35,10 @@ export default {
         </div>
       </div>
 
+      <div id="loadMore">
+        LOAD MORE
+      </div>
+
     </div>
     <!-- BARRA INFO -->
     <div id="barra-info" class="blu-teambg">
@@ -63,6 +66,7 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
+    padding-bottom: 50px;
   }
 
   #barra-info{
@@ -122,7 +126,6 @@ export default {
     padding: 12px;
   }#title{
     color: white;
-    font-size: large;
   }
 
   #imgBox{
@@ -133,5 +136,14 @@ export default {
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  #loadMore{
+    background-color:#0282f9;
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    padding:5px 20px 5px 20px;
+    font-size: small;
   }
 </style>

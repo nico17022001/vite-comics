@@ -1,9 +1,12 @@
 <script>
+import arrayMenu from '../data/array-menu.js'; 
 
 export default {
   name: "Header",
   data(){
     return{
+      arrayMenu,
+      counter: 0,
 
     }
   }
@@ -21,16 +24,7 @@ export default {
       <!-- CONTENITORE MENU -->
       <div id="contenitore-nav">
         <ul>
-          <li>CHARACTERS</li>
-          <li>COMICS</li>
-          <li>MOVIES</li>
-          <li>TV</li>
-          <li>GAMES</li>
-          <li>COLLECTIBLES</li>
-          <li>VIDEOS</li>
-          <li>FANS</li>
-          <li>NEWS</li>
-          <li>SHOP</li>
+          <li v-for="(menuLi , i) in arrayMenu" :key="i" :class="{active : counter == i} " @click="counter = i">{{ menuLi }}</li>
         </ul>
       </div>
     </div>
@@ -76,13 +70,19 @@ export default {
         justify-content: center;
         align-items: center;
         height: 90px;
+        cursor: pointer;
+        &.active{
+        color: #0282f9;;
+        border-bottom:solid 5px #0282f9; 
+        }
       }
 
       li:hover{
-          color: #0282f9;;
+          color: #0282f9;
           border-bottom:solid 5px #0282f9; 
         }
     }
   }
+
 
 </style>
