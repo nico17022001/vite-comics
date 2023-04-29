@@ -1,10 +1,15 @@
 <script>
-import {links} from '../data/database.js'
+import {links} from '../data/database.js';
+import imgDc from '../data/imgs.json';
+
+
+
 export default {
   name:'Main',
   data(){
     return{
       links,
+      imgDc,
     }
   }
 }
